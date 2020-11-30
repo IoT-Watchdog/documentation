@@ -6,6 +6,7 @@ Der IoT-Watchdog öffnet ein zweites WLAN, das vom Heim-Netzwerk getrennt und si
 
 Fortgeschrittene Benutzer können ihn zum Blocken von Verbindungen verwenden.
 
+
 ## Installation
 
 Benötigte Teile:
@@ -29,6 +30,7 @@ Bauen Sie das Set-Up in der folgenden Reihenfolge auf:
 Der IoT-Watchdog bootet sobald mit der Stromversorgung verbunden, und braucht ca. 1 Minute zum Start. Danach ist der Hotspot aktiv und sein Interface via Webbrowser erreichbar.
 
 Das LAN-Interface ist auf DHCP eingestellt, er sollte sich vom Router automatisch eine IP-Adresse holen.
+
 
 ## Bedienung
 
@@ -58,6 +60,7 @@ Weiters können folgende integrierte Open-Source-Tools auch direkt aufgerufen we
 * Wireshark
 * ntop-ng
 
+
 ### Systemeinstellungen
 
 Hier findet man Netzwerkeinstellungen sowie die Möglichkeit zum Reboot.
@@ -65,6 +68,7 @@ Hier findet man Netzwerkeinstellungen sowie die Möglichkeit zum Reboot.
 Die SSID/Passwort des Hotspots kann man hier ändern.
 * Die SSID muss sich von der SSID des Heim-WLANs unterscheiden!
 * Das Passwort muss mindestens 8 Zeichen haben.
+
 
 #### Netzwerk
 
@@ -77,16 +81,17 @@ IP-Adresse: siehe erste Zeile je interface.
 * pan0: Bluetooth-Netzwerk (nur aktiv, wenn IoT-Gerät via BT verbunden)
 * wlan0: Der Wifi-Hotspot des IoT-Watchdog
 
-#### Reboot/Halt
+
+#### Reboot/Shutdown
 
 Ein Reboot ist normalerweise nicht nötig - er resettet jedoch bei Bedarf die lokale Datenbank mit den Verbindungen.
 
-Wir empfehlen, den IoT-Watchdog immer sauber mit "Halt" herunterzufahren, und nicht einfach vom Strom zu trennen - dabei könnte das Dateisystem auf der µSD-Karte beschädigt werden.
+Wir empfehlen, den IoT-Watchdog immer sauber mit "Shut Down" herunterzufahren, und nicht einfach vom Strom zu trennen - dabei könnte das Dateisystem auf der µSD-Karte beschädigt werden.
+
 
 #### Dienste
 
-In den Service-Einstellungen können die laufenden Dienste am IoT-Watchdog aktiviert/deaktiviert werden. Wir empfehlen das nur für Fortgeschrittene!
-
+In der Sektion "System Services" können die laufenden Dienste am IoT-Watchdog aktiviert/deaktiviert werden. Wir empfehlen das nur für Fortgeschrittene!
 
 
 ## Testen von WLAN-Geräten:
@@ -156,3 +161,16 @@ Die IoT-Watchdog-Pakete von UnravelTEC können momentan nur manuell upgedatet we
 * lcars-api (Backend)
 
 Aktuelle Versionen der Pakete findet man unter [github.com/IoT-Watchdog](https://github.com/IoT-Watchdog/).
+
+## Credits
+
+Verwendete Open Source-Software:
+
+* Pi-gen: https://github.com/RPi-Distro/Pi-gen
+  * Fork für IoT-Watchdog: https://github.com/IoT-Watchdog/pi-gen
+* ng-unrvl Data Visualization Frontend: github.com/UnravelTEC/ng-unrvl 
+  * Fork für IoT-Watchdog: https://github.com/IoT-Watchdog/ng-unrvl
+* ntop-ng Community Edition: https://github.com/ntop/ntopng
+* Wireshark: https://www.wireshark.org/
+  * integration via https://github.com/ct-Open-Source/ctraspion
+* Datenbank MariaDB: https://mariadb.org/ 
