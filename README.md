@@ -10,7 +10,7 @@ Fortgeschrittene Benutzer können ihn zum Blocken von Verbindungen verwenden.
 ## Installation
 
 Benötigte Teile:
-* IoT-Watchdog (Raspberry Pi 4)
+* IoT-Watchdog (Raspberry Pi 4 + µSD-Karte mit [Image](https://github.com/IoT-Watchdog/pi-gen-iot-watchdog))
 * Netzteil für IoT-Watchdog (USB-C, min. 2.5A)
 * Internet-Router mit freiem LAN-Anschluss
 * Netzwerkkabel
